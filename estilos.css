@@ -1,0 +1,35 @@
+.caja {
+  width: 200px;
+  height: 100px;
+  color: white;
+  background: #316453;
+  border: 3px solid #162c91;
+  padding: 20px;
+  margin: 30px;
+}
+
+.padre {
+  position: relative; /* ¡Clave para contener al hijo! */
+  width: 300px;
+  height: 200px;
+  background: rgb(23, 196, 199);
+  margin: 50px;
+}
+.hijo {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  background: rgb(255, 255, 0);
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  background: #333;
+  padding: 2rem;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+}
