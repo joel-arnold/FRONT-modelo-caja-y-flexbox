@@ -1,2 +1,2 @@
-# c304-front
-Repositorio de pruebas en clases para la Comisión 304 - TT - I.S.I.
+# FRONT - Modelo de caja y Flexbox
+Ejemplos básicos para entender el modelo de caja y flexbox de CSS.

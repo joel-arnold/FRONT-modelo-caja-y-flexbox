@@ -72,10 +72,24 @@ p {
 .menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: center; /* Centra verticalmente todos los elementos del menú */
   background: #333;
   padding: 2rem;
 }
+
+.logo-menu {
+  height: 30px; /* Tamaño pequeño para que quepa bien */
+  width: auto; /* Mantiene la proporción de la imagen */
+  margin-right: 1rem; /* Espacio entre el logo y los enlaces */
+  flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+.menu-links {
+  display: flex;
+  flex: 1; /* Ocupa todo el espacio restante */
+  justify-content: space-around; /* Distribuye los enlaces uniformemente */
+}
+
 .menu a {
   color: white;
   text-decoration: none;
@@ -109,6 +123,18 @@ p {
   .menu {
     flex-direction: column; /* Cambia la dirección del menú a columna en pantallas pequeñas */
     align-items: center; /* Centra los enlaces del menú */
+  }
+  
+  .menu-links {
+    flex-direction: column; /* También cambia los enlaces a columna */
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo-menu {
+    height: 25px; /* Reduce el tamaño del logo en pantallas pequeñas */
+    margin-bottom: 1rem; /* Agrega espacio debajo del logo */
+    margin-right: 0; /* Elimina el margen derecho en columna */
   }
   
 }
