@@ -1,3 +1,34 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #c7c1c1;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #262f36;
+  font-size: 2rem;
+  margin-top: 20px;
+  /* margin-bottom: 5px; */
+}
+
+h3 {
+  text-align: left;
+  color: #262f36;
+  font-size: 1rem;
+  margin-left: 30px;
+}
+
+p {
+  text-align: center;
+  color: #262f36;
+  font-size: 1.2rem;
+  margin-left: 30px;
+  width: 80%;
+}
+
+
 .caja {
   width: 200px;
   height: 100px;
@@ -6,26 +37,41 @@
   border: 3px solid #162c91;
   border-radius: 5px;
   padding: 20px;
+  box-shadow: 0 0 10px #000;
   margin: 30px;
 }
 
 .padre {
-  position: relative; /* ¡Clave para contener al hijo! */
+  display: flex; /* Utiliza Flexbox para el padre */
+  flex-direction: row; /* Cambia la dirección del texto a derecha a izquierda */
+  justify-content: space-around; /* Centra horizontalmente los hijos */
+  align-items: center; /* Centra verticalmente los hijos */
+  flex-grow: inherit;
+  flex-shrink: calc(100% - 100px);
+  flex-basis: 100px;
+  align-self: flex-end;
+  border: 2px solid #21212a;
   width: 300px;
   height: 200px;
-  background: rgb(23, 196, 199);
-  margin: 50px;
+  background: rgb(207, 155, 32);
+  margin: 30px;
 }
+
 .hijo {
-  position: absolute;
-  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el contenido del hijo */
+  position: relative; /* Posicionamiento relativo para el hijo */
+  width: 50px;
   height: 50px;
-  background: rgb(255, 255, 0);
+  border: rgb(150, 57, 57) solid 1px;
+  font-size: x-small;
+  background: rgb(200, 77, 32);
 }
 
 .menu {
   display: flex;
-  gap: 10px;
+  flex-direction: row;
   justify-content: space-around;
   background: #333;
   padding: 2rem;
@@ -33,4 +79,36 @@
 .menu a {
   color: white;
   text-decoration: none;
+}
+
+.menu a:hover {
+  color: #ff0;
+  text-decoration: underline;
+}
+
+.menu a:active {
+  color: #f00;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.8rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
+  }
+  
+  .caja, .padre, .hijo {
+    width: 100%; /* Hace que los elementos ocupen todo el ancho disponible */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    margin: 10px; /* Reduce el margen para pantallas pequeñas */
+  }
+  
+  h1, h3, p {
+    font-size: 1rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+  }
+
+  .menu {
+    flex-direction: column; /* Cambia la dirección del menú a columna en pantallas pequeñas */
+    align-items: center; /* Centra los enlaces del menú */
+  }
+  
 }
